@@ -1,0 +1,30 @@
+body {
+    background-color: #f3f8f7;
+}
+
+#main-header {
+    background-color: #1f7a6d;
+}
+
+.navbar {
+    background-color: #155a50;
+}
+
+footer {
+    background-color: #155a50;
+}
+
+.campana {
+    background-color: #f2994a;
+}
+
+.btn-primary {
+    --bs-btn-bg: #1f7a6d;
+    --bs-btn-border-color: #1f7a6d;
+    --bs-btn-hover-bg: #155a50;
+    --bs-btn-hover-border-color: #155a50;
+}
+
+.card-header {
+    color: #155a50;
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(contenido, scripts)">
+    <head th:replace="~{general/fragmentos :: head}"></head>
+    <body>
+        <header th:replace="~{general/fragmentos :: header}"></header>
+        <nav th:replace="~{general/fragmentos :: navbar}"></nav>
+
+        <th:block th:replace="${contenido}"></th:block>
+
+        <section th:replace="~{general/fragmentos :: mostrarToast}"></section>
+        <footer th:replace="~{general/fragmentos :: footer}"></footer>
+
+        <th:block th:replace="${scripts}"></th:block>
+    </body>
+</html>

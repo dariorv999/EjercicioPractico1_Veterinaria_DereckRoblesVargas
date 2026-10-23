@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{general/plantilla :: layout(~{::#contenido}, ~{})}">
+    <body>
+        <div id="contenido" class="container py-4">
+            <div class="card campana text-white mb-4">
+                <div class="card-body p-4">
+                    <h2><i class="fa-solid fa-dog"></i> [[#{index.campana}]]</h2>
+                    <p class="lead mb-0">[[#{index.campana.texto}]]</p>
+                </div>
+            </div>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fa-regular fa-clock"></i> [[#{index.horario}]]</h4>
+                            <p>[[#{index.horario.texto}]]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-location-dot"></i> [[#{index.ubicacion}]]</h4>
+                            <p>[[#{index.ubicacion.texto}]]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-stethoscope"></i> [[#{index.especialidades}]]</h4>
+                            <p>[[#{index.especialidades.texto}]]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/LZ9AKsUCcTI" allowfullscreen></iframe>
+            </div>
+        </div>
+    </body>
+</html>

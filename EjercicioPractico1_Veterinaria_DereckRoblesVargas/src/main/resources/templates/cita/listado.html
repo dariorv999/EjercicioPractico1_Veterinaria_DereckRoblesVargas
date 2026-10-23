@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{general/plantilla :: layout(~{::#contenido}, ~{})}">
+    <body>
+        <div id="contenido">
+            <section th:replace="~{cita/fragmentos :: listado}"></section>
+        </div>
+    </body>
+</html>

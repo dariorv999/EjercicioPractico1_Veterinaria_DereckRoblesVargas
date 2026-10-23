@@ -1,0 +1,36 @@
+<section th:fragment="listado" class="p-3">
+    <div class="row p-3">
+        <div class="col-md-12">
+            <div class="card p-2">
+                <div class="card-header"><h4>[[#{cita.listado}]]</h4></div>
+                <div class="card-body">
+                    <div th:if="${citas != null and !citas.empty}">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>[[#{cita.mascota}]]</th>
+                                    <th>[[#{cita.propietario}]]</th>
+                                    <th>[[#{cita.fecha}]]</th>
+                                    <th>[[#{cita.servicio}]]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="c : ${citas}">
+                                    <td>[[${c.id}]]</td>
+                                    <td>[[${c.nombreMascota}]]</td>
+                                    <td>[[${c.nombrePropietario}]]</td>
+                                    <td>[[${#temporals.format(c.fecha, 'dd/MM/yyyy')}]]</td>
+                                    <td>[[${c.servicio.nombre}]]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center p-2" th:if="${citas == null or citas.empty}">
+                        <span>[[#{lista.vacia}]]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

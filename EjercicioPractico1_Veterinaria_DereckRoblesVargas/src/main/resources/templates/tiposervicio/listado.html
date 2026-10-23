@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{general/plantilla :: layout(~{::#contenido}, ~{::script})}">
+    <body>
+        <div id="contenido">
+            <section th:replace="~{tiposervicio/fragmentos :: formulario}"></section>
+            <section th:replace="~{tiposervicio/fragmentos :: listado}"></section>
+            <section th:replace="~{general/fragmentos :: confirmarEliminar(@{/tiposervicio/eliminar},'idTipoServicio')}"></section>
+        </div>
+        <script th:src="@{/js/modulos/tiposervicio.js}"></script>
+    </body>
+</html>
